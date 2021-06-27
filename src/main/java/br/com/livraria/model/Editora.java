@@ -21,12 +21,12 @@ public class Editora {
     private Long codEditora;
 
     @NotBlank
-    @Size(min = 3, max = 20)
+    @Size(min = 3, max = 80)
     @Column(nullable = false)
     private String nomeEditora;
 
     @NotBlank
-    @Size(min = 3, max = 20)
+    @Size(min = 3, max = 50)
     @Column(nullable = false)
     private String cidade;
 

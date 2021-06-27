@@ -33,5 +33,7 @@ public class Aluguel {
     private LocalDate dataAluguel;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dataPrevisao;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate dataDevolucao;
 
 }

@@ -22,18 +22,18 @@ public class Usuario {
     private Long id;
 
     @NotBlank
-    @Size(min = 3, max = 20)
-    @Column(nullable = false, length = 60)
+    @Size(min = 3, max = 35)
+    @Column(nullable = false)
     private String nome;
 
 
     @NotBlank
-    @Size(min = 3, max = 20)
+    @Size(min = 3, max = 35)
     @Column(nullable = false)
     private String cidade;
 
     @NotBlank
-    @Size(min = 3, max = 20)
+    @Size(min = 3, max = 35)
     @Column(nullable = false)
     private String endereco;
 

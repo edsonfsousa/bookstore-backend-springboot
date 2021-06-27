@@ -30,6 +30,12 @@ public class LivroController {
         List<LivroDTO> livroDTOs = livroRepository.findAll().stream().map(livro -> new LivroDTO(livro)).collect(Collectors.toList());
         return new ResponseEntity<>(livroDTOs, HttpStatus.OK);
     }
+    @GetMapping("/buscardisp")
+    @ApiOperation(value="Retorna uma lista de livros disponiveis")
+    public ResponseEntity<List<LivroDTO>> buscarDisp() {
+        List<LivroDTO> livroDTOs = livroRepository.findDisponivel().stream().map(livro -> new LivroDTO(livro)).collect(Collectors.toList());
+        return new ResponseEntity<>(livroDTOs, HttpStatus.OK);
+    }
 
     @PostMapping("/inserir")
     @ApiOperation(value="Insere um livro")
@@ -41,6 +47,7 @@ public class LivroController {
     @PutMapping("/alterar")
     @ApiOperation(value="Altera um livro")
     public Livro alterar(@RequestBody Livro livro){
+        livro.setQuantalugado(livro.getQuantalugado());
         return livroRepository.save(livro);
 
     }

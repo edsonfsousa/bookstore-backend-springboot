@@ -22,6 +22,7 @@ public class AluguelDTO {
     private String nome;
     private LocalDate dataAluguel;
     private LocalDate dataPrevisao;
+    private LocalDate dataDevolucao;
     private Long livroId;
     private Long usuarioId;
 
@@ -31,6 +32,7 @@ public class AluguelDTO {
         this.nome = aluguel.getUsuario().getNome();
         this.dataAluguel = aluguel.getDataAluguel();
         this.dataPrevisao = aluguel.getDataPrevisao();
+        this.dataDevolucao = aluguel.getDataDevolucao();
         this.livroId = aluguel.getLivro().getId();
         this.usuarioId = aluguel.getUsuario().getId();
     }

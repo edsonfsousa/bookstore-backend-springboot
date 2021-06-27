@@ -20,6 +20,7 @@ public class LivroDTO {
     private String autor;
     private LocalDate lancamento;
     private int quant;
+    private int quantalugado;
     private String nomeEditora;
     private Long codEditora;
 
@@ -29,6 +30,7 @@ public class LivroDTO {
         this.autor = livro.getAutor();
         this.lancamento = livro.getLancamento();
         this.quant = livro.getQuant();
+        this.quantalugado = livro.getQuantalugado();
         this.nomeEditora = livro.getEditora().getNomeEditora();
         this.codEditora = livro.getEditora().getCodEditora();
     }

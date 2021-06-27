@@ -23,12 +23,12 @@ public class Livro {
     private Long id;
 
     @NotBlank
-    @Size(min = 3, max = 20)
+    @Size(min = 3, max = 120)
     @Column(nullable = false, length = 60)
     private String nomeLivro;
 
     @NotBlank
-    @Size(min = 3, max = 20)
+    @Size(min = 3, max = 35)
     @Column(nullable = false, length = 60)
     private String autor;
 
@@ -36,8 +36,10 @@ public class Livro {
     @Column(nullable = false)
     private LocalDate lancamento;
 
-    @Column(nullable = false, length = 60)
+    @Column(nullable = false)
     private int quant;
+
+    private int quantalugado;
 
     @OneToMany(mappedBy = "livro", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Aluguel> alugueis;
